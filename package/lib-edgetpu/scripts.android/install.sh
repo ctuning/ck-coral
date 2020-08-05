@@ -6,7 +6,7 @@
 # See CK LICENSE.txt for licensing details.
 # See CK Copyright.txt for copyright details.
 #
-# Developer(s): Grigori Fursin, 2016-2017
+# Developer(s):
 #
 
 #  Check extra stuff
