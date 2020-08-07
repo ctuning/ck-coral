@@ -10,11 +10,10 @@
       "linux": "libedgetpu.so.1"
     }
   },
-  "soft_name": "Coral TPU lib",
+  "soft_name": "EdgeTPU lib",
   "tags": [
     "lib",
-    "coral",
-    "google",
-    "libedgetpu"
+    "libedgetpu",
+    "edgetpu"
   ]
 }

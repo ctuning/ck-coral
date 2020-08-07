@@ -2,24 +2,20 @@
   "customize": {
     "extra_dir": "",
     "install_env": {
-      "PACKAGE_UNZIP": "YES",
-      "PACKAGE_UNZIP_SKIP_ERROR": "YES",
-      "PACKAGE_URL": "https://packages.cloud.google.com/apt/pool/libedgetpu1-std_14.1_arm64_4669a44bd6d6f3b7d33c356182ceaeb29e1c981843629adeb77ac1283dbd498e.deb",
+      "PACKAGE_URL": "https://packages.cloud.google.com/apt/pool/",
       "PACKAGE_WGET": "YES",
       "PACKAGE_WGET_EXTRA": "--no-cookies"
     },
     "version": "with-variations"
   },
   "end_full_path": {
-    "linux": "lib/aarch64-linux-gnu/libedgetpu.so.1"
+    "linux": "usr/lib/aarch64-linux-gnu/libedgetpu.so.1"
   },
   "need_cpu_info": "yes",
   "only_for_host_os_tags": [
-    "windows",
     "linux"
   ],
   "only_for_target_os_tags": [
-    "windows",
     "linux"
   ],
   "process_script": "install",
@@ -27,35 +23,27 @@
   "suggested_path": "lib-edgetpu",
   "tags": [
     "lib",
-    "coral",
-    "google",
+    "libedgetpu",
     "edgetpu"
   ],
-  "use_preprocess_scripts_from_another_entry": {
-    "data_uoa": "fd44428fbc77f77f",
-    "module_uoa": "84e27ad9dd12e734"
-  },
-  "use_scripts_from_another_entry": {
-    "data_uoa": "9a716d6c4b2f5204",
-    "module_uoa": "script"
-  },
   "variations": {
     "v14.1_std": {
       "extra_customize": {
         "version": "14.1"
       },
       "extra_env": {
-        "PACKAGE_UNZIP": "NO",
-        "PACKAGE_UNZIP_SKIP_ERROR": "YES",
-        "PACKAGE_WGET": "NO",
-        "PACKAGE_WGET_EXTRA": ""
+        "PACKAGE_NAME": "libedgetpu1-std_14.1_arm64_4669a44bd6d6f3b7d33c356182ceaeb29e1c981843629adeb77ac1283dbd498e.deb"
       },
-      "extra_tags": [
-        "v14.1",
-        "v14",
-        "std"
-      ],
       "on_by_default": "yes"
+    },
+   "v14.1_max": {
+      "extra_customize": {
+        "version": "14.1"
+      },
+      "extra_env": {
+        "PACKAGE_NAME": "libedgetpu1-max_14.1_arm64_795e7f49c81b1f9586f43b1978dd938b192df3e5e4939e1e8deb965d64ca41e6.deb"
+      },
+      "on_by_default": "no"
     }
   }
 }
