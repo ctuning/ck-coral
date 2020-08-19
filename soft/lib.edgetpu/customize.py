@@ -61,7 +61,6 @@ def setup(i):
     ck_tools_dir = os.path.dirname(install_dir)
 
     env[ep] = ck_tools_dir
-    #env[ep+'_LIBS'] = '-lmace'
     env[ep+'_LIB_DIRS'] = '-L'+os.path.join(lib_dir)
     env[ep+'_INCLUDE0'] = os.path.join(install_dir, 'include')
 
