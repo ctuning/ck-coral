@@ -19,4 +19,5 @@ wget --no-cookies ${PACKAGE_URL}${PACKAGE_NAME}
 exit_if_error "wget failed"
 dpkg -x $PACKAGE_NAME .
 exit_if_error "dpkg failed"
+cp -r usr/lib/*/libedgetpu* usr/lib/
 return 0

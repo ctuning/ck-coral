@@ -1,3 +1,4 @@
+cd $(dirname $0)
 mkdir coral && cd coral
 git clone https://github.com/google-coral/tflite.git
 cd tflite/python/examples/classification
