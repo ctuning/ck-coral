@@ -19,4 +19,8 @@ wget --no-cookies ${PACKAGE_URL}${PACKAGE_NAME}
 exit_if_error "wget failed"
 dpkg -x $PACKAGE_NAME .
 exit_if_error "dpkg failed"
+
+cd ${INSTALL_DIR}/usr/lib/aarch64-linux-gnu/
+ln -s libedgetpu.so.1.0 libedgetpu.so
+
 return 0
