@@ -61,7 +61,12 @@ def setup(i):
     ck_tools_dir = os.path.dirname(install_dir)
 
     env[ep] = ck_tools_dir
-    env[ep+'_LIB_DIRS'] = '-L'+os.path.join(lib_dir)
+    env[ep+'_LIB_DIRS'] = os.path.join(lib_dir)
     env[ep+'_INCLUDE0'] = os.path.join(install_dir, 'include')
+
+    if 'LD_LIBRARY_PATH' in env:
+        env['LD_LIBRARY_PATH'] = os.path.join(lib_dir, ':', env['LD_LIBRARY_PATH'])
+    else:
+        env['LD_LIBRARY_PATH'] = lib_dir
 
     return {'return': 0, 'bat': ''}
