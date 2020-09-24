@@ -5,6 +5,11 @@
   "data_name": "ck-coral",
   "dict": {
     "shared": "git",
+    "repo_deps": [
+      {
+        "repo_uoa": "ck-autotuning"
+      }
+    ],
     "url": "https://github.com/ctuning/ck-coral"
   }
 }
